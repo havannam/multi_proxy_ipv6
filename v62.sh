@@ -64,7 +64,6 @@ EOF
 }
 
 systemctl stop 3proxy
-/etc/init.d/network restart
 
 cd $WORKDIR
 
