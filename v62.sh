@@ -63,8 +63,6 @@ $(awk -F "/" '{print "ifconfig '$main_interface' inet6 add " $5 "/64"}' ${WORKDA
 EOF
 }
 
-systemctl stop 3proxy
-
 cd $WORKDIR
 
 echo "working folder = /home/proxy-installer"
@@ -78,7 +76,7 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
 FIRST_PORT=40000
-LAST_PORT=41000
+LAST_PORT=42000
 
 gen_data >$WORKDIR/data.txt
 gen_iptables >$WORKDIR/boot_iptables.sh
@@ -90,4 +88,3 @@ bash /etc/rc.local
 
 gen_proxy_file_for_user
 
-systemctl start 3proxy
