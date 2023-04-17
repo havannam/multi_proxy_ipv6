@@ -92,5 +92,3 @@ bash /etc/rc.local
 gen_proxy_file_for_user
 
 systemctl start 3proxy
-
-reboot
