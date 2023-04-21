@@ -63,6 +63,11 @@ $(awk -F "/" '{print "ifconfig '$main_interface' inet6 add " $5 "/64"}' ${WORKDA
 EOF
 }
 
+rm -f /root/boot_ifconfig.sh
+rm -f /root/boot_iptables.sh
+rm -f /root/data.txt
+rm -f /root/proxy.txt
+
 cd $WORKDIR
 
 echo "working folder = /home/proxy-installer"
