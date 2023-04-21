@@ -117,8 +117,6 @@ cat >>/etc/rc.local <<EOF
 #systemctl start NetworkManager.service
 # ifup ${main_interface}
 bash ${WORKDIR}/v62.sh
-ulimit -n 65535
-/usr/local/etc/3proxy/bin/3proxy /usr/local/etc/3proxy/3proxy.cfg &
 EOF
 
 gen_proxy_file_for_user
