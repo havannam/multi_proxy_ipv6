@@ -89,7 +89,5 @@ gen_ifconfig >$WORKDIR/boot_ifconfig.sh
 
 gen_3proxy >/usr/local/etc/3proxy/3proxy.cfg
 
-bash /etc/rc.local
-
 gen_proxy_file_for_user
 
